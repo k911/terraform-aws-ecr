@@ -10,6 +10,7 @@
 | namespace | Namespace (e.g. `eg` or `cp`) | string | `` | no |
 | principals_full_access | Principal ARNs to provide with full access to the ECR | list(string) | `<list>` | no |
 | principals_readonly_access | Principal ARNs to provide with readonly access to the ECR | list(string) | `<list>` | no |
+| regex_replace_chars | Regex to replace chars with empty string in `namespace`, `environment`, `stage` and `name`. By default only hyphens, letters and digits are allowed, all other chars are removed | string | `/[^a-zA-Z0-9-]/` | no |
 | stage | Stage (e.g. `prod`, `dev`, `staging`) | string | `` | no |
 | tags | Additional tags (e.g. `map('BusinessUnit','XYZ')`) | map(string) | `<map>` | no |
 | use_fullname | Set 'true' to use `namespace-stage-name` for ecr repository name, else `name` | bool | `true` | no |
